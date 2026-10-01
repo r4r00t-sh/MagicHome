@@ -21,22 +21,7 @@ export function Testimonials() {
   }, [total]);
 
   return (
-    <section className="relative overflow-hidden py-20 sm:py-24">
-      <svg
-        className="pointer-events-none absolute inset-x-0 top-24 h-24 w-full text-mint/40 sm:top-28"
-        viewBox="0 0 1200 80"
-        preserveAspectRatio="none"
-        aria-hidden
-      >
-        <path
-          d="M0,40 C150,10 300,70 450,40 C600,10 750,70 900,40 C1050,10 1150,50 1200,35"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="3"
-          strokeLinecap="round"
-        />
-      </svg>
-
+    <section id="reviews" className="relative scroll-mt-28 overflow-hidden py-12 sm:py-14">
       <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
         <SectionHeading
           eyebrow="Testimonials"
@@ -55,7 +40,7 @@ export function Testimonials() {
           </a>
         </div>
 
-        <div className="relative mx-auto mt-10 flex h-24 max-w-lg items-center justify-center">
+        <div className="relative mx-auto mt-6 flex h-16 max-w-lg items-center justify-center">
           {siteConfig.testimonials.map((item, i) => {
             const offsets = [-72, 0, 72];
             const sizes = [52, 64, 52];

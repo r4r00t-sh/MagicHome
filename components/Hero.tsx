@@ -25,7 +25,7 @@ export function Hero() {
   return (
     <section ref={sectionRef} className="relative overflow-hidden bg-background">
       {/* Dark green hero band */}
-      <div className="relative bg-primary pb-40 pt-28 sm:pb-48 sm:pt-32 lg:pb-56 lg:pt-36">
+      <div className="relative bg-primary pb-28 pt-24 sm:pb-32 sm:pt-28">
         <div className="pointer-events-none absolute inset-0 dashed-grid opacity-25" />
         <div className="pointer-events-none absolute -right-16 top-20 h-56 w-56 organic-blob bg-mint/20 blur-3xl" />
 
@@ -94,7 +94,7 @@ export function Hero() {
           <svg
             viewBox="0 0 1440 120"
             preserveAspectRatio="none"
-            className="h-16 w-full sm:h-20 lg:h-24"
+            className="h-10 w-full sm:h-12"
             aria-hidden
           >
             <path
@@ -106,7 +106,7 @@ export function Hero() {
       </div>
 
       {/* Overlapping hero image card */}
-      <div className="relative z-10 mx-auto -mt-36 max-w-5xl px-4 sm:-mt-44 sm:px-6 lg:-mt-52">
+      <div className="relative z-10 mx-auto -mt-20 max-w-5xl px-4 sm:-mt-24 sm:px-6">
         <motion.div
           initial={mounted ? { opacity: 0, scale: 0.94, y: 40 } : false}
           animate={mounted ? { opacity: 1, scale: 1, y: 0 } : undefined}
@@ -116,7 +116,7 @@ export function Hero() {
           <div className="relative overflow-hidden rounded-[1.75rem] border border-primary/5 bg-surface shadow-[0_30px_80px_-30px_rgba(3,44,155,0.45)] sm:rounded-[2rem]">
             <motion.div
               style={{ y: imageY, scale: imageScale }}
-              className="relative aspect-[16/10] w-full sm:aspect-[16/9]"
+              className="relative aspect-[2/1] w-full sm:aspect-[21/8]"
             >
               <Image
                 src={siteConfig.hero.image}
@@ -266,7 +266,7 @@ export function Hero() {
         </motion.div>
       </div>
 
-      <div className="h-16 sm:h-20" />
+      <div className="h-8 sm:h-10" />
     </section>
   );
 }

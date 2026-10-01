@@ -21,11 +21,12 @@ export const siteConfig = {
   },
   nav: [
     { label: "Services", href: "/#services" },
-    { label: "Pricing", href: "/pricing" },
+    { label: "Pricing", href: "/#pricing" },
+    { label: "How It Works", href: "/#how-it-works" },
     { label: "Areas", href: "/#areas" },
-    { label: "About", href: "/#about" },
-    { label: "FAQ", href: "/#faq" },
-    { label: "Blog", href: "/#blog" },
+    { label: "Reviews", href: "/#reviews" },
+    { label: "Quote", href: "/#quote" },
+    { label: "FAQ", href: "/faq" },
   ],
   hero: {
     eyebrow: "PROFESSIONAL HOME CLEANING",
@@ -601,12 +602,11 @@ export const siteConfig = {
     blurb: "Professional cleaning that makes your home feel magical.",
     quickLinks: [
       { label: "Home", href: "/" },
-      { label: "About", href: "/#about" },
       { label: "Services", href: "/#services" },
       { label: "Pricing", href: "/pricing" },
       { label: "Areas We Serve", href: "/#areas" },
-      { label: "FAQ", href: "/#faq" },
-      { label: "Blog", href: "/#blog" },
+      { label: "FAQ", href: "/faq" },
+      { label: "Blog", href: "/blog/how-often-should-you-deep-clean" },
       { label: "Contact", href: "/contact" },
     ],
     serviceLinks: [

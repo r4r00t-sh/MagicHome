@@ -8,7 +8,7 @@ import { staggerContainer, viewportOnce } from "@/lib/animations";
 
 export function ServicesSection() {
   return (
-    <section id="services" className="relative scroll-mt-28 py-20 sm:py-24 lg:py-28">
+    <section id="services" className="relative scroll-mt-28 py-12 sm:py-14">
       <div className="pointer-events-none absolute right-8 top-10 hidden h-40 w-40 sunburst lg:block" />
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <SectionHeading
@@ -22,7 +22,7 @@ export function ServicesSection() {
           initial="hidden"
           whileInView="visible"
           viewport={viewportOnce}
-          className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
+          className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
         >
           {siteConfig.services.map((service) => (
             <ServiceCard key={service.id} {...service} />

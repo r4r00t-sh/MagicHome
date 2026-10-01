@@ -3,7 +3,7 @@ import { siteConfig } from "@/lib/site-config";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = siteConfig.url;
-  const staticRoutes = ["", "/pricing", "/contact", "/privacy", "/terms"].map(
+  const staticRoutes = ["", "/pricing", "/faq", "/contact", "/privacy", "/terms"].map(
     (path) => ({
       url: `${base}${path || "/"}`,
       lastModified: new Date(),

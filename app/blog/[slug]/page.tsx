@@ -31,7 +31,7 @@ export default async function BlogPostPage({ params }: Props) {
     <SiteShell>
       <main id="main" className="bg-background pb-24 pt-28">
         <article className="mx-auto max-w-3xl px-4 sm:px-6">
-          <Link href="/#blog" className="text-sm font-semibold text-bright hover:underline">
+          <Link href="/" className="text-sm font-semibold text-bright hover:underline">
             ← Blog
           </Link>
           <p className="mt-6 text-xs font-semibold uppercase tracking-[0.18em] text-muted">

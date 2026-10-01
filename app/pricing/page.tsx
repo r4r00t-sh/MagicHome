@@ -74,7 +74,7 @@ export default function PricingPage() {
               ))}
             </div>
             <Link
-              href="/#estimate"
+              href="/#quote"
               className="mt-4 inline-block text-sm font-semibold text-bright underline"
             >
               Open estimate calculator →

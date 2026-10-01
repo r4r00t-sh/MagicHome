@@ -48,7 +48,7 @@ export default function ContactPage() {
           </div>
 
           <div className="mt-8">
-            <Button href="/#booking">Book online</Button>
+            <Button href="/#quote">Request a quote</Button>
           </div>
         </div>
         <QuoteSection />

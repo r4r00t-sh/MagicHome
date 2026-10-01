@@ -11,7 +11,7 @@ export function Footer() {
       <div className="pointer-events-none absolute -left-20 top-10 h-64 w-64 rounded-full bg-mint/10 blur-3xl" />
       <div className="pointer-events-none absolute -right-16 bottom-0 h-72 w-72 organic-blob bg-accent/10 blur-2xl" />
 
-      <div className="relative mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:py-20">
+      <div className="relative mx-auto max-w-6xl px-4 py-12 sm:px-6">
         <div className="grid gap-12 lg:grid-cols-[1.2fr_1fr_1fr_1.1fr]">
           <div>
             <Logo light />

@@ -10,7 +10,7 @@ import { fadeUp, staggerContainer, viewportOnce } from "@/lib/animations";
 
 export function PricingSection() {
   return (
-    <section id="pricing" className="relative scroll-mt-28 py-20 sm:py-24">
+    <section id="pricing" className="relative scroll-mt-28 py-12 sm:py-14">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <SectionHeading
           eyebrow="Transparent Pricing"
@@ -23,7 +23,7 @@ export function PricingSection() {
           initial="hidden"
           whileInView="visible"
           viewport={viewportOnce}
-          className="mt-12 grid gap-6 lg:grid-cols-3"
+          className="mt-8 grid gap-4 lg:grid-cols-3"
         >
           {siteConfig.pricing.map((plan) => (
             <motion.article
@@ -101,8 +101,8 @@ export function PricingSection() {
           </div>
           <p className="mt-4 text-sm text-muted">
             Recurring weekly and biweekly plans unlock automatic discounts in our{" "}
-            <Link href="/#estimate" className="font-semibold text-bright underline">
-              estimate calculator
+            <Link href="/#quote" className="font-semibold text-bright underline">
+              free quote form
             </Link>
             .
           </p>

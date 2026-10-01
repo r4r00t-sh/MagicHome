@@ -7,7 +7,7 @@ import { fadeUp, staggerContainer, viewportOnce } from "@/lib/animations";
 
 export function HowItWorks() {
   return (
-    <section className="relative overflow-hidden bg-primary py-20 text-white sm:py-24">
+    <section id="how-it-works" className="relative scroll-mt-28 overflow-hidden bg-primary py-12 text-white sm:py-14">
       <div className="pointer-events-none absolute inset-0 dashed-grid opacity-20" />
       <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
         <SectionHeading
@@ -17,7 +17,7 @@ export function HowItWorks() {
           description="Three easy steps from booking to a home that feels brand new."
         />
 
-        <div className="relative mt-14">
+        <div className="relative mt-8">
           <div className="pointer-events-none absolute left-[8%] right-[8%] top-8 hidden h-px overflow-hidden lg:block">
             <motion.div
               initial={{ scaleX: 0 }}

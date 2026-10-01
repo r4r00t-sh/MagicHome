@@ -51,7 +51,7 @@ export default async function ServicePage({ params }: Props) {
               <Button href="/#quote" magnetic>
                 Get a Free Quote
               </Button>
-              <Button href="/#estimate" variant="secondary">
+              <Button href="/#quote" variant="secondary">
                 Estimate Price
               </Button>
             </div>

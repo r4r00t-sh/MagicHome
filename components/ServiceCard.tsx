@@ -73,7 +73,7 @@ export function ServiceCard({
         aria-hidden
       />
 
-      <div className="relative aspect-[4/3] overflow-hidden">
+      <div className="relative aspect-[16/9] overflow-hidden">
         <Image
           src={image}
           alt={imageAlt}
@@ -91,7 +91,7 @@ export function ServiceCard({
         </motion.div>
       </div>
 
-      <div className="relative z-10 flex flex-1 flex-col p-6">
+      <div className="relative z-10 flex flex-1 flex-col p-4 sm:p-5">
         <h3 className="text-xl font-bold tracking-tight text-primary transition group-hover:text-primary-dark">
           {title}
         </h3>

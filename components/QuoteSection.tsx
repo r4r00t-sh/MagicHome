@@ -50,7 +50,7 @@ export function QuoteSection() {
   }
 
   return (
-    <section id="quote" className="relative scroll-mt-28 py-20 sm:py-24">
+    <section id="quote" className="relative scroll-mt-28 py-12 sm:py-14">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <SectionHeading
           eyebrow="Free Quote"
@@ -63,7 +63,7 @@ export function QuoteSection() {
           initial="hidden"
           whileInView="visible"
           viewport={viewportOnce}
-          className="mx-auto mt-12 max-w-3xl rounded-[2rem] border border-primary/8 bg-surface p-6 shadow-[0_24px_60px_-35px_rgba(3,44,155,0.45)] sm:p-8"
+          className="mx-auto mt-8 max-w-3xl rounded-[2rem] border border-primary/8 bg-surface p-6 shadow-[0_24px_60px_-35px_rgba(3,44,155,0.45)] sm:p-8"
         >
           <form onSubmit={onSubmit} className="grid gap-4 sm:grid-cols-2" noValidate>
             <label className="block text-sm font-medium text-primary">

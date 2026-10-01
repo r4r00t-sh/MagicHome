@@ -41,7 +41,7 @@ export function SectionHeading({
         </p>
       ) : null}
       <h2
-        className={`text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl ${
+        className={`text-3xl font-extrabold tracking-tight sm:text-4xl ${
           light ? "text-white" : "text-primary"
         }`}
       >

@@ -8,10 +8,10 @@ import { Icon } from "@/components/ui/Icon";
 import { fadeUp, viewportOnce } from "@/lib/animations";
 
 export function FAQ() {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="relative scroll-mt-28 py-20 sm:py-24">
+    <section id="faq" className="relative scroll-mt-28 py-12 pb-16 sm:py-14">
       <div className="mx-auto max-w-3xl px-4 sm:px-6">
         <SectionHeading
           eyebrow="FAQ"
