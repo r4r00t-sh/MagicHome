@@ -102,7 +102,7 @@ export function Navbar() {
         </div>
 
         <div className="hidden lg:block">
-          <Button href="/#quote" magnetic className="!py-2.5 !text-xs sm:!text-sm">
+          <Button href="/book" magnetic className="!py-2.5 !text-xs sm:!text-sm">
             Book a Cleaning
           </Button>
         </div>
@@ -143,7 +143,7 @@ export function Navbar() {
                 </motion.a>
               ))}
               <Link
-                href="/#quote"
+                href="/book"
                 onClick={() => setOpen(false)}
                 className="btn-shine mt-2 inline-flex w-full items-center justify-center overflow-hidden rounded-full bg-accent px-6 py-3 text-sm font-semibold text-primary-dark"
               >

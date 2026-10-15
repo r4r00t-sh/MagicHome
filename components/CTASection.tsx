@@ -36,7 +36,7 @@ export function CTASection() {
                 {siteConfig.cta.text}
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <Button href="/#quote" variant="dark" magnetic>
+                <Button href="/book" variant="dark" magnetic>
                   Book a Cleaning
                 </Button>
                 <Button

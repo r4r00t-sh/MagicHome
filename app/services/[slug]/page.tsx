@@ -48,11 +48,21 @@ export default async function ServicePage({ params }: Props) {
               From ${service.startingPrice}
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
-              <Button href="/#quote" magnetic>
-                Get a Free Quote
+              <Button
+                href={
+                  service.id === "regular"
+                    ? "/book?service=regular"
+                    : "/#quote"
+                }
+                magnetic
+              >
+                {service.id === "regular" ? "Book Home Cleaning" : "Get a Free Quote"}
               </Button>
-              <Button href="/#quote" variant="secondary">
-                Estimate Price
+              <Button
+                href={service.id === "regular" ? "/book?service=regular" : "/#quote"}
+                variant="secondary"
+              >
+                {service.id === "regular" ? "Configure & Estimate" : "Estimate Price"}
               </Button>
             </div>
 

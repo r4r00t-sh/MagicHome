@@ -54,8 +54,12 @@ export default function PricingPage() {
                     </li>
                   ))}
                 </ul>
-                <Button href="/#quote" className="mt-8" variant={plan.popular ? "primary" : "dark"}>
-                  Get a Quote
+                <Button
+                  href={plan.href}
+                  className="mt-8"
+                  variant={plan.popular ? "primary" : "dark"}
+                >
+                  {plan.id === "standard" ? "Book Home Cleaning" : "Get a Quote"}
                 </Button>
               </article>
             ))}
@@ -74,10 +78,10 @@ export default function PricingPage() {
               ))}
             </div>
             <Link
-              href="/#quote"
+              href="/book"
               className="mt-4 inline-block text-sm font-semibold text-bright underline"
             >
-              Open estimate calculator →
+              Configure Home Cleaning booking →
             </Link>
           </div>
         </div>

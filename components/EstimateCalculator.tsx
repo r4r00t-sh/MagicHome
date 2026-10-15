@@ -157,8 +157,8 @@ export function EstimateCalculator() {
               </p>
             </div>
             <div className="mt-8 flex flex-col gap-2">
-              <Button href="/#booking" magnetic>
-                Schedule & Pay Deposit
+              <Button href="/book" magnetic>
+                Configure Home Cleaning
               </Button>
               <Button href="/#quote" variant="outline">
                 Prefer a Custom Quote?

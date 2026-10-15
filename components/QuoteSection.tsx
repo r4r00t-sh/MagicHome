@@ -54,8 +54,8 @@ export function QuoteSection() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <SectionHeading
           eyebrow="Free Quote"
-          title="Book a Cleaning or Get an Estimate."
-          description="Tell us about your home and we’ll follow up with pricing and availability—usually within one business day."
+          title="Get a Free Quote."
+          description="Prefer a custom estimate? Tell us about your home and we’ll follow up—usually within one business day. For Home Cleaning configuration, use Book a Cleaning."
         />
 
         <motion.div

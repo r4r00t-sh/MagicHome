@@ -14,6 +14,71 @@ export const siteConfig = {
   analyticsId: "",
   bookingEmbedUrl: "https://cal.com",
   depositAmount: 25,
+  /**
+   * Home Cleaning booking flow pricing.
+   * Only apply discounts/fees that are set here.
+   * Fields marked isPlaceholder must be updated with real business rates before go-live.
+   */
+  booking: {
+    serviceId: "regular",
+    cleanerOptions: [1, 2, 3, 4] as const,
+    durationOptions: [2, 3, 4, 5, 6, 7, 8] as const,
+    defaultCleaners: 1,
+    defaultHours: 2,
+    /** Labor base uses existing Standard Clean starting price ($129). */
+    laborBasePrice: 129,
+    referenceCleaners: 1,
+    /**
+     * PLACEHOLDER: hours assumed for the Standard Clean starting price.
+     * Adjust so laborBasePrice ÷ referenceHours matches your real hourly rate.
+     */
+    referenceHours: {
+      value: 4,
+      isPlaceholder: true,
+      note: "Placeholder — set to the hours your $129 Standard Clean assumes.",
+    },
+    materials: {
+      /** PLACEHOLDER: set a dollar amount to charge when customers need materials. */
+      fee: null as number | null,
+      isPlaceholder: true,
+      note: "Materials fee not configured — charged as $0 until set.",
+    },
+    taxRatePercent: {
+      /** PLACEHOLDER: set sales tax % when known (e.g. 8.25). */
+      value: null as number | null,
+      isPlaceholder: true,
+      note: "Tax rate not configured — no tax applied until set.",
+    },
+    serviceFee: {
+      /** PLACEHOLDER: flat fee per booking if applicable. */
+      value: null as number | null,
+      isPlaceholder: true,
+      note: "Service fee not configured — $0 until set.",
+    },
+    frequencies: [
+      {
+        id: "once" as const,
+        label: "Once",
+        description: "One-time cleaning.",
+        discountPercent: 0,
+      },
+      {
+        id: "weekly" as const,
+        label: "Weekly",
+        description: "Recurring weekly cleaning.",
+        /** Matches existing estimatePrice weekly discount. */
+        discountPercent: 15,
+      },
+      {
+        id: "multi-weekly" as const,
+        label: "Multiple Times a Week",
+        description: "More frequent recurring cleaning.",
+        /** Not configured in existing pricing — no discount until set. */
+        discountPercent: null as number | null,
+      },
+    ],
+    specialInstructionsMax: 200,
+  },
   seo: {
     title: "Magic Home | Professional Home Cleaning Services",
     description:
@@ -201,7 +266,7 @@ export const siteConfig = {
         "Flexible scheduling",
       ],
       popular: false,
-      href: "/#quote",
+      href: "/book?service=regular",
     },
     {
       id: "deep",

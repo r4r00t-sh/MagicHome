@@ -75,7 +75,7 @@ export function Hero() {
               transition={{ duration: 0.55, delay: 0.72 }}
               className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row"
             >
-              <Button href="/#quote" magnetic className="w-full sm:w-auto">
+              <Button href="/book" magnetic className="w-full sm:w-auto">
                 {siteConfig.hero.primaryCta}
               </Button>
               <Button

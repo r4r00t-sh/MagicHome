@@ -16,7 +16,7 @@ export function MobileStickyBar() {
           Call
         </a>
         <Link
-          href="/#quote"
+          href="/book"
           className="btn-shine inline-flex flex-1 items-center justify-center overflow-hidden rounded-full bg-accent px-4 py-3 text-sm font-semibold text-primary-dark"
         >
           Book / Quote
