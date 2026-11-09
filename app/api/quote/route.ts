@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { isZipServed } from "@/lib/site-config";
+import { isCommunityServed } from "@/lib/site-config";
 
 export async function POST(request: Request) {
   try {
@@ -7,14 +7,14 @@ export async function POST(request: Request) {
     const name = String(body.name ?? "").trim();
     const email = String(body.email ?? "").trim();
     const phone = String(body.phone ?? "").trim();
-    const zip = String(body.zip ?? "").trim();
+    const community = String(body.community ?? body.zip ?? "").trim();
     const service = String(body.service ?? "").trim();
     const bedrooms = String(body.bedrooms ?? "").trim();
     const bathrooms = String(body.bathrooms ?? "").trim();
     const notes = String(body.notes ?? "").trim();
     const preferredDate = String(body.preferredDate ?? "").trim();
 
-    if (!name || !email || !phone || !zip || !service) {
+    if (!name || !email || !phone || !community || !service) {
       return NextResponse.json(
         { ok: false, error: "Please fill in all required fields." },
         { status: 400 }
@@ -28,19 +28,12 @@ export async function POST(request: Request) {
       );
     }
 
-    if (!/^\d{5}$/.test(zip)) {
-      return NextResponse.json(
-        { ok: false, error: "Please enter a valid 5-digit ZIP code." },
-        { status: 400 }
-      );
-    }
-
-    const served = isZipServed(zip);
+    const served = isCommunityServed(community);
     const payload = {
       name,
       email,
       phone,
-      zip,
+      community,
       service,
       bedrooms,
       bathrooms,
@@ -58,7 +51,7 @@ export async function POST(request: Request) {
       served,
       message: served
         ? "Thanks! We received your request and will follow up shortly."
-        : "Thanks! Your ZIP is outside our listed coverage—we'll still review and contact you.",
+        : "Thanks! Your area is outside our listed Dubai coverage—we'll still review and contact you.",
     });
   } catch {
     return NextResponse.json(

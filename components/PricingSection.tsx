@@ -14,7 +14,7 @@ export function PricingSection() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <SectionHeading
           eyebrow="Transparent Pricing"
-          title="Simple Packages. Clear Starting Prices."
+          title="Simple Packages. Clear AED Starting Prices."
           description="Know what to expect before you book. Final quotes depend on home size and condition."
         />
 
@@ -51,7 +51,7 @@ export function PricingSection() {
               </p>
               <p className="mt-6 flex items-end gap-1">
                 <span className="text-4xl font-extrabold tracking-tight">
-                  ${plan.price}
+                  AED {plan.price}
                 </span>
                 <span
                   className={`pb-1 text-sm ${
@@ -95,7 +95,7 @@ export function PricingSection() {
                 className="inline-flex items-center gap-2 rounded-full border border-primary/10 bg-background px-4 py-2 text-sm font-medium text-primary"
               >
                 {addOn.name}
-                <span className="text-muted">+${addOn.price}</span>
+                <span className="text-muted">+AED {addOn.price}</span>
               </span>
             ))}
           </div>

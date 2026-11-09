@@ -116,7 +116,7 @@ export function Footer() {
                     name: "Newsletter",
                     email,
                     phone: "n/a",
-                    zip: "78701",
+                    community: "dubai-marina",
                     service: "newsletter",
                     notes: "Newsletter signup",
                   }),
@@ -147,7 +147,7 @@ export function Footer() {
         </div>
 
         <div className="mt-14 flex flex-col gap-3 border-t border-white/10 pt-6 text-xs text-white/50 sm:flex-row sm:items-center sm:justify-between">
-          <p>© 2026 Magic Home. All Rights Reserved.</p>
+          <p>© 2026 Dubai Magic Home. All Rights Reserved.</p>
           <div className="flex gap-4">
             <a href="/privacy" className="hover:text-accent">
               Privacy Policy

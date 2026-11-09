@@ -14,7 +14,8 @@ export type BookingSelections = {
   phone: string;
   email: string;
   address: string;
-  zip: string;
+  /** Dubai community / area slug (replaces US ZIP). */
+  community: string;
   preferredDate: string;
   preferredTime: string;
 };
@@ -43,7 +44,7 @@ export type BookingPriceBreakdown = {
   placeholders: string[];
 };
 
-export const BOOKING_STORAGE_KEY = "magic-home-booking-v1";
+export const BOOKING_STORAGE_KEY = "dubai-magic-home-booking-v1";
 
 export function createDefaultBookingSelections(
   serviceId: string = siteConfig.booking.serviceId
@@ -59,7 +60,7 @@ export function createDefaultBookingSelections(
     phone: "",
     email: "",
     address: "",
-    zip: "",
+    community: "",
     preferredDate: "",
     preferredTime: "",
   };
@@ -187,13 +188,13 @@ export function calculateBookingPrice(
   if (taxRatePercent > 0 || cfg.taxRatePercent.value != null) {
     lines.push({
       id: "tax",
-      label: `Tax (${taxRatePercent}%)`,
+      label: `VAT (${taxRatePercent}%)`,
       amount: roundMoney(tax),
       isPlaceholder: cfg.taxRatePercent.value == null,
       note:
         cfg.taxRatePercent.value == null
           ? cfg.taxRatePercent.note
-          : undefined,
+          : "UAE VAT",
     });
   }
 
@@ -219,9 +220,9 @@ export function roundMoney(value: number): number {
 }
 
 export function formatMoney(value: number): string {
-  return new Intl.NumberFormat("en-US", {
+  return new Intl.NumberFormat(siteConfig.currencyLocale, {
     style: "currency",
-    currency: "USD",
+    currency: siteConfig.currency,
     minimumFractionDigits: value % 1 === 0 ? 0 : 2,
     maximumFractionDigits: 2,
   }).format(value);
@@ -257,8 +258,14 @@ export function validateScheduleStep(selections: BookingSelections): string[] {
     errors.push("Enter a valid email address.");
   }
   if (!selections.address.trim()) errors.push("Enter your service address.");
-  if (!/^\d{5}$/.test(selections.zip.trim())) {
-    errors.push("Enter a valid 5-digit ZIP code.");
+  if (!selections.community.trim()) {
+    errors.push("Select your Dubai community.");
+  } else if (
+    !siteConfig.areas.some(
+      (a) => a.slug === selections.community || a.id === selections.community
+    )
+  ) {
+    errors.push("Select a valid Dubai community from the list.");
   }
   if (!selections.preferredDate) errors.push("Choose a preferred date.");
   return errors;

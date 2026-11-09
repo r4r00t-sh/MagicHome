@@ -14,7 +14,7 @@ export function BeforeAfter() {
         <SectionHeading
           eyebrow="Our Projects"
           title="Before & After That Speak for Themselves."
-          description="Real transformations from kitchens, baths, and living spaces across Greater Austin."
+          description="Real transformations from kitchens, baths, and living spaces across Dubai homes."
         />
 
         <motion.div

@@ -55,7 +55,7 @@ export function QuoteSection() {
         <SectionHeading
           eyebrow="Free Quote"
           title="Get a Free Quote."
-          description="Prefer a custom estimate? Tell us about your home and we’ll follow up—usually within one business day. For Home Cleaning configuration, use Book a Cleaning."
+          description="Prefer a custom estimate for your Dubai apartment or villa? Tell us about your home and we’ll follow up—usually within one business day. Prices in AED."
         />
 
         <motion.div
@@ -89,16 +89,15 @@ export function QuoteSection() {
               />
             </label>
             <label className="block text-sm font-medium text-primary">
-              ZIP code *
-              <input
-                name="zip"
-                inputMode="numeric"
-                pattern="\d{5}"
-                maxLength={5}
-                required
-                placeholder="78701"
-                className={`mt-1.5 ${fieldClass}`}
-              />
+              Dubai community *
+              <select name="community" required className={`mt-1.5 ${fieldClass}`}>
+                <option value="">Select community</option>
+                {siteConfig.areas.map((area) => (
+                  <option key={area.slug} value={area.slug}>
+                    {area.name}
+                  </option>
+                ))}
+              </select>
             </label>
             <label className="block text-sm font-medium text-primary sm:col-span-2">
               Service *

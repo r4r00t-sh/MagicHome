@@ -88,8 +88,8 @@ export function CleaningDetailsStep({
         </legend>
         <p className="mt-1 text-xs text-muted">
           {siteConfig.booking.materials.fee == null
-            ? "Placeholder: materials fee is not configured yet ($0 until set in site config)."
-            : `Materials add $${siteConfig.booking.materials.fee} if needed.`}
+            ? "Placeholder: materials fee is not configured yet (AED 0 until set in site config)."
+            : `Materials add AED ${siteConfig.booking.materials.fee} if needed.`}
         </p>
         <div className="mt-3 grid grid-cols-2 gap-2">
           <OptionChip

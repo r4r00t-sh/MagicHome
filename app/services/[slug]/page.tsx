@@ -45,7 +45,7 @@ export default async function ServicePage({ params }: Props) {
             <p className="mt-4 text-lg text-muted">{service.description}</p>
             <p className="mt-3 text-sm text-muted">{service.details}</p>
             <p className="mt-6 text-3xl font-extrabold text-primary">
-              From ${service.startingPrice}
+              From AED {service.startingPrice}
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <Button

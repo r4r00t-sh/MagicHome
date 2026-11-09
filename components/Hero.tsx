@@ -9,7 +9,7 @@ import { Icon } from "@/components/ui/Icon";
 import { floatSoft, popIn } from "@/lib/animations";
 import { useMounted } from "@/lib/use-mounted";
 
-const headingLines = ["Come Home to a", "Little More Magic."];
+const headingLines = ["Dubai Homes,", "A Little More Magic."];
 
 export function Hero() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -158,7 +158,7 @@ export function Hero() {
                   onClick={(e) => e.stopPropagation()}
                 >
                   <iframe
-                    title="Magic Home brand story"
+                    title="Dubai Magic Home brand story"
                     src={siteConfig.videoUrl}
                     className="h-full w-full"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

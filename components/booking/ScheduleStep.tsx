@@ -1,5 +1,6 @@
 "use client";
 
+import { siteConfig } from "@/lib/site-config";
 import { BookingSelections } from "@/lib/booking";
 
 const fieldClass =
@@ -23,8 +24,8 @@ export function ScheduleStep({
           Schedule & contact
         </h2>
         <p className="mt-2 text-sm text-muted">
-          Tell us where and when to clean. We’ll confirm availability before the
-          booking is finalized.
+          Tell us where in Dubai and when to clean. We’ll confirm availability
+          before the booking is finalized.
         </p>
       </div>
 
@@ -58,6 +59,7 @@ export function ScheduleStep({
             value={selections.phone}
             onChange={(e) => onChange({ phone: e.target.value })}
             autoComplete="tel"
+            placeholder="+971 50 000 0000"
             className={`mt-1.5 ${fieldClass}`}
           />
         </label>
@@ -77,22 +79,24 @@ export function ScheduleStep({
             value={selections.address}
             onChange={(e) => onChange({ address: e.target.value })}
             autoComplete="street-address"
-            placeholder="Street, unit, city"
+            placeholder="Building, apartment / villa number"
             className={`mt-1.5 ${fieldClass}`}
           />
         </label>
         <label className="block text-sm font-medium text-primary">
-          ZIP code *
-          <input
-            value={selections.zip}
-            onChange={(e) =>
-              onChange({ zip: e.target.value.replace(/\D/g, "").slice(0, 5) })
-            }
-            inputMode="numeric"
-            autoComplete="postal-code"
-            placeholder="78701"
+          Dubai community *
+          <select
+            value={selections.community}
+            onChange={(e) => onChange({ community: e.target.value })}
             className={`mt-1.5 ${fieldClass}`}
-          />
+          >
+            <option value="">Select community</option>
+            {siteConfig.areas.map((area) => (
+              <option key={area.slug} value={area.slug}>
+                {area.name}
+              </option>
+            ))}
+          </select>
         </label>
         <label className="block text-sm font-medium text-primary">
           Preferred time

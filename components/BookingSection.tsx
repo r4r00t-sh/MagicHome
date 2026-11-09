@@ -17,7 +17,7 @@ export function BookingSection() {
         <SectionHeading
           eyebrow="Online Booking"
           title="Pick a Time. Secure Your Spot."
-          description="Use our scheduling embed for real availability. A small deposit holds your appointment—applied to your first clean."
+          description="Use our scheduling embed for real Dubai availability. A small AED deposit holds your appointment—applied to your first clean."
         />
 
         <motion.div
@@ -59,9 +59,9 @@ export function BookingSection() {
           <div className="rounded-[2rem] border border-primary/8 bg-surface p-6 sm:p-8">
             <h3 className="text-xl font-bold text-primary">Secure deposit</h3>
             <p className="mt-2 text-sm leading-relaxed text-muted">
-              Pay a ${siteConfig.depositAmount} deposit to confirm your booking.
-              This is a Stripe-ready checkout placeholder—connect your payment
-              provider when going live.
+              Pay an AED {siteConfig.depositAmount} deposit to confirm your Dubai
+              booking. This is a Stripe-ready checkout placeholder—connect your
+              payment provider when going live.
             </p>
 
             <ul className="mt-6 space-y-2 text-sm text-primary">
@@ -89,12 +89,12 @@ export function BookingSection() {
                   if (typeof window !== "undefined" && window.gtag) {
                     window.gtag("event", "begin_checkout", {
                       value: siteConfig.depositAmount,
-                      currency: "USD",
+                      currency: "AED",
                     });
                   }
                 }}
               >
-                Pay ${siteConfig.depositAmount} Deposit (Demo)
+                Pay AED {siteConfig.depositAmount} Deposit (Demo)
               </Button>
             ) : (
               <p

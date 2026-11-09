@@ -8,7 +8,7 @@ import { Icon } from "@/components/ui/Icon";
 export const metadata: Metadata = {
   title: `Pricing | ${siteConfig.name}`,
   description:
-    "Transparent starting prices for standard, deep, and move-in/out cleaning packages in Austin.",
+    "Transparent AED starting prices for standard, deep, and move-in/out cleaning packages across Dubai.",
 };
 
 export default function PricingPage() {
@@ -20,11 +20,12 @@ export default function PricingPage() {
             Pricing
           </p>
           <h1 className="mt-3 text-4xl font-extrabold tracking-tight text-primary sm:text-5xl">
-            Packages built for real homes.
+            Packages built for Dubai homes.
           </h1>
           <p className="mt-4 max-w-2xl text-muted">
-            Starting prices below. Final quotes depend on size and condition—use
-            the calculator or request a free estimate.
+            Starting prices in AED below. Final quotes depend on apartment or
+            villa size and condition—use the calculator or request a free estimate.
+            UAE VAT (5%) may apply at checkout.
           </p>
 
           <div className="mt-12 grid gap-6 lg:grid-cols-3">
@@ -45,7 +46,7 @@ export default function PricingPage() {
                 >
                   {plan.description}
                 </p>
-                <p className="mt-6 text-4xl font-extrabold">${plan.price}</p>
+                <p className="mt-6 text-4xl font-extrabold">AED {plan.price}</p>
                 <ul className="mt-6 flex-1 space-y-2 text-sm">
                   {plan.features.map((f) => (
                     <li key={f} className="flex gap-2">
@@ -73,7 +74,7 @@ export default function PricingPage() {
                   key={a.id}
                   className="rounded-full bg-background px-3 py-1.5 text-sm text-primary"
                 >
-                  {a.name} · ${a.price}
+                  {a.name} · AED {a.price}
                 </span>
               ))}
             </div>
