@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { isZipServed } from "@/lib/site-config";
+import { isCommunityServed } from "@/lib/site-config";
 import {
   calculateBookingPrice,
   validateCleaningStep,
@@ -22,7 +22,7 @@ export async function POST(request: Request) {
       phone: String(body.phone ?? "").trim(),
       email: String(body.email ?? "").trim(),
       address: String(body.address ?? "").trim(),
-      zip: String(body.zip ?? "").trim(),
+      community: String(body.community ?? body.zip ?? "").trim(),
       preferredDate: String(body.preferredDate ?? "").trim(),
       preferredTime: String(body.preferredTime ?? "").trim(),
     };
@@ -40,7 +40,7 @@ export async function POST(request: Request) {
     }
 
     const estimate = calculateBookingPrice(selections);
-    const served = isZipServed(selections.zip);
+    const served = isCommunityServed(selections.community);
 
     const payload = {
       type: "home_cleaning_booking",
@@ -61,7 +61,7 @@ export async function POST(request: Request) {
       estimate,
       message: served
         ? "Thanks! Your booking request was received. We’ll confirm availability shortly."
-        : "Thanks! Your ZIP is outside our listed coverage—we’ll still review and contact you.",
+        : "Thanks! Your area is outside our listed Dubai coverage—we’ll still review and contact you.",
     });
   } catch {
     return NextResponse.json(

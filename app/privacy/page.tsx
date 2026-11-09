@@ -22,9 +22,9 @@ export default function PrivacyPage() {
           <p className="mt-2 text-sm text-muted">Last updated: March 2026</p>
           <div className="mt-8 space-y-4 text-base leading-relaxed text-muted">
             <p>
-              Magic Home (“we”, “us”) collects information you submit through quote
-              forms, booking requests, and newsletter signups—typically your name,
-              email, phone, address or ZIP, and service preferences.
+              Dubai Magic Home (“we”, “us”) collects information you submit through
+              quote forms, booking requests, and newsletter signups—typically your
+              name, email, phone, address or Dubai community, and service preferences.
             </p>
             <p>
               We use this information to respond to inquiries, schedule services,

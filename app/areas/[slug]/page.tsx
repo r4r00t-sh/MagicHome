@@ -38,8 +38,9 @@ export default async function AreaPage({ params }: Props) {
           </h1>
           <p className="mt-4 text-lg text-muted">{area.blurb}</p>
           <p className="mt-4 text-sm text-muted">
-            ZIP coverage includes prefixes like{" "}
-            {area.zipPrefixes.join(", ")}. Confirm your exact ZIP on the quote form.
+            Neighbourhoods we cover nearby include{" "}
+            {area.communities.join(", ")}. Confirm your community on the quote
+            form — pricing shown site-wide is in AED.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Button href="/#quote" magnetic>

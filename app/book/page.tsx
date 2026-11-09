@@ -7,7 +7,7 @@ import { BookingWizard } from "@/components/booking/BookingWizard";
 export const metadata: Metadata = {
   title: "Book Home Cleaning",
   description:
-    "Configure cleaners, hours, materials, and frequency for Magic Home cleaning, then submit your booking request.",
+    "Configure cleaners, hours, materials, and frequency for Dubai Magic Home cleaning across Dubai, then submit your booking request in AED.",
 };
 
 type Props = {

@@ -1,21 +1,23 @@
 export const siteConfig = {
-  name: "Magic Home",
-  tagline: "Professional Cleaning. A Home That Feels Like Magic.",
-  phone: "(512) 555-0142",
-  phoneHref: "tel:+15125550142",
-  email: "hello@magichome.example",
-  emailHref: "mailto:hello@magichome.example",
-  address: "1200 Clean Street, Austin, TX 78701",
-  hours: "Mon–Sat 8:00 AM – 6:00 PM",
-  url: "https://magichome.example",
+  name: "Dubai Magic Home",
+  tagline: "Professional Cleaning Across Dubai. A Home That Feels Like Magic.",
+  phone: "+971 50 555 0142",
+  phoneHref: "tel:+971505550142",
+  email: "hello@dubaimagichome.ae",
+  emailHref: "mailto:hello@dubaimagichome.ae",
+  address: "Marina Plaza, Dubai Marina, Dubai, UAE",
+  hours: "Sat–Thu 8:00 AM – 7:00 PM (GST)",
+  url: "https://dubaimagichome.ae",
   ogImage: "/og-image.svg",
-  googleReviewsUrl: "https://www.google.com/maps",
+  googleReviewsUrl: "https://www.google.com/maps/place/Dubai",
   videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0",
   analyticsId: "",
   bookingEmbedUrl: "https://cal.com",
-  depositAmount: 25,
+  currency: "AED",
+  currencyLocale: "en-AE",
+  depositAmount: 50,
   /**
-   * Home Cleaning booking flow pricing.
+   * Home Cleaning booking flow pricing (AED).
    * Only apply discounts/fees that are set here.
    * Fields marked isPlaceholder must be updated with real business rates before go-live.
    */
@@ -25,35 +27,33 @@ export const siteConfig = {
     durationOptions: [2, 3, 4, 5, 6, 7, 8] as const,
     defaultCleaners: 1,
     defaultHours: 2,
-    /** Labor base uses existing Standard Clean starting price ($129). */
-    laborBasePrice: 129,
+    /** Labor base uses Standard Clean starting price (AED 199). */
+    laborBasePrice: 199,
     referenceCleaners: 1,
     /**
-     * PLACEHOLDER: hours assumed for the Standard Clean starting price.
+     * Hours assumed for the Standard Clean starting price.
      * Adjust so laborBasePrice ÷ referenceHours matches your real hourly rate.
      */
     referenceHours: {
       value: 4,
-      isPlaceholder: true,
-      note: "Placeholder — set to the hours your $129 Standard Clean assumes.",
+      isPlaceholder: false,
+      note: "Standard Clean assumes ~4 hours for a typical Dubai apartment.",
     },
     materials: {
-      /** PLACEHOLDER: set a dollar amount to charge when customers need materials. */
-      fee: null as number | null,
-      isPlaceholder: true,
-      note: "Materials fee not configured — charged as $0 until set.",
+      fee: 25 as number | null,
+      isPlaceholder: false,
+      note: "AED 25 materials fee when supplies are provided by our team.",
     },
     taxRatePercent: {
-      /** PLACEHOLDER: set sales tax % when known (e.g. 8.25). */
-      value: null as number | null,
-      isPlaceholder: true,
-      note: "Tax rate not configured — no tax applied until set.",
+      /** UAE VAT */
+      value: 5 as number | null,
+      isPlaceholder: false,
+      note: "5% UAE VAT applied to the discounted subtotal.",
     },
     serviceFee: {
-      /** PLACEHOLDER: flat fee per booking if applicable. */
       value: null as number | null,
       isPlaceholder: true,
-      note: "Service fee not configured — $0 until set.",
+      note: "Service fee not configured — AED 0 until set.",
     },
     frequencies: [
       {
@@ -66,23 +66,21 @@ export const siteConfig = {
         id: "weekly" as const,
         label: "Weekly",
         description: "Recurring weekly cleaning.",
-        /** Matches existing estimatePrice weekly discount. */
         discountPercent: 15,
       },
       {
         id: "multi-weekly" as const,
         label: "Multiple Times a Week",
-        description: "More frequent recurring cleaning.",
-        /** Not configured in existing pricing — no discount until set. */
-        discountPercent: null as number | null,
+        description: "More frequent recurring cleaning for busy Dubai homes.",
+        discountPercent: 20 as number | null,
       },
     ],
     specialInstructionsMax: 200,
   },
   seo: {
-    title: "Magic Home | Professional Home Cleaning Services",
+    title: "Dubai Magic Home | Professional Home Cleaning in Dubai",
     description:
-      "Reliable, professional home cleaning in Austin and nearby neighborhoods. Book Magic Home for regular, deep, move-in/out, and custom cleaning that feels like magic.",
+      "Reliable, professional home cleaning across Dubai — Marina, Downtown, Palm Jumeirah, JLT, and more. Book Dubai Magic Home for regular, deep, move-in/out, and villa cleaning in AED.",
   },
   nav: [
     { label: "Services", href: "/#services" },
@@ -94,10 +92,10 @@ export const siteConfig = {
     { label: "FAQ", href: "/faq" },
   ],
   hero: {
-    eyebrow: "PROFESSIONAL HOME CLEANING",
-    heading: "Come Home to a Little More Magic.",
+    eyebrow: "DUBAI HOME CLEANING",
+    heading: "Dubai Homes, A Little More Magic.",
     supporting:
-      "Reliable, professional home cleaning services designed to give you more time, more comfort, and a home you’ll love coming back to.",
+      "Trusted villa, apartment, and maid-service cleaning across Dubai. Book in minutes, pay in AED, and come home to a space that feels brand new.",
     primaryCta: "Book a Cleaning",
     secondaryCta: "Get a Free Quote",
     image:
@@ -107,7 +105,7 @@ export const siteConfig = {
   },
   floatingBadges: [
     { id: "rating", label: "5.0 Customer Rating", icon: "star" as const },
-    { id: "homes", label: "Trusted by 500+ Homes", icon: "home" as const },
+    { id: "homes", label: "Trusted by 800+ Dubai Homes", icon: "home" as const },
     { id: "eco", label: "Eco-Friendly Cleaning", icon: "leaf" as const },
     { id: "insured", label: "Fully Insured", icon: "shield" as const },
   ],
@@ -122,9 +120,9 @@ export const siteConfig = {
       slug: "regular-house-cleaning",
       title: "Regular House Cleaning",
       description:
-        "Weekly, biweekly or monthly cleaning to keep your home fresh.",
+        "Weekly, biweekly or monthly cleaning for Dubai apartments and villas.",
       details:
-        "Dusting, floors, kitchens, baths, and tidy living spaces on a schedule that fits your life.",
+        "Dusting, floors, kitchens, baths, and tidy living spaces on a schedule that fits your Dubai lifestyle.",
       included: [
         "Dusting all reachable surfaces",
         "Kitchen counters and sink",
@@ -138,16 +136,16 @@ export const siteConfig = {
       imageAlt: "Cleaner vacuuming a light-filled living room",
       icon: "sparkles" as const,
       href: "/services/regular-house-cleaning",
-      startingPrice: 129,
+      startingPrice: 199,
     },
     {
       id: "deep",
       slug: "deep-cleaning",
       title: "Deep Cleaning",
       description:
-        "Detailed cleaning for homes that need extra attention.",
+        "Detailed cleaning for homes that need a full Dubai reset.",
       details:
-        "Baseboards, fixtures, inside appliances, and hard-to-reach spots for a true reset.",
+        "Baseboards, fixtures, inside appliances, and hard-to-reach spots — ideal after travel season or before guests arrive.",
       included: [
         "Everything in regular cleaning",
         "Baseboards and door frames",
@@ -161,22 +159,22 @@ export const siteConfig = {
       imageAlt: "Sparkling clean modern bathroom",
       icon: "droplets" as const,
       href: "/services/deep-cleaning",
-      startingPrice: 249,
+      startingPrice: 399,
     },
     {
       id: "move",
       slug: "move-in-move-out-cleaning",
       title: "Move In / Move Out Cleaning",
       description:
-        "Get your property spotless before moving in or handing over the keys.",
+        "Get your Dubai property spotless before handover or Ejari inspection.",
       details:
-        "Empty-home detail cleaning so inspections and first nights feel effortless.",
+        "Empty-home detail cleaning so landlord inspections and first nights feel effortless.",
       included: [
         "Empty-home deep clean",
         "Cabinets inside and out",
         "Appliance interiors",
         "Closets and shelves",
-        "Deposit-ready finish",
+        "Handover-ready finish",
       ],
       notIncluded: ["Junk removal", "Repairs"],
       image:
@@ -184,15 +182,15 @@ export const siteConfig = {
       imageAlt: "Bright empty modern home ready for move-in",
       icon: "truck" as const,
       href: "/services/move-in-move-out-cleaning",
-      startingPrice: 299,
+      startingPrice: 499,
     },
     {
       id: "apartment",
       slug: "apartment-cleaning",
       title: "Apartment Cleaning",
-      description: "Professional cleaning for apartments and condos.",
+      description: "Professional cleaning for Dubai apartments and studios.",
       details:
-        "Efficient routines sized for compact spaces without cutting corners.",
+        "Efficient routines sized for Marina, JLT, Downtown, and Business Bay apartments without cutting corners.",
       included: [
         "Full kitchen and bath detail",
         "Living areas dusted",
@@ -205,14 +203,14 @@ export const siteConfig = {
       imageAlt: "Modern apartment living room with soft natural light",
       icon: "building" as const,
       href: "/services/apartment-cleaning",
-      startingPrice: 109,
+      startingPrice: 169,
     },
     {
       id: "kitchen-bath",
       slug: "kitchen-bathroom-cleaning",
       title: "Kitchen & Bathroom Cleaning",
       description:
-        "Detailed cleaning for the areas that need it most.",
+        "Detailed cleaning for the areas that need it most in Dubai’s heat and humidity.",
       details:
         "Counters, sinks, tile, glass, and fixtures left gleaming and hygienic.",
       included: [
@@ -227,16 +225,16 @@ export const siteConfig = {
       imageAlt: "Bright modern kitchen with clean white counters",
       icon: "sink" as const,
       href: "/services/kitchen-bathroom-cleaning",
-      startingPrice: 89,
+      startingPrice: 149,
     },
     {
       id: "custom",
       slug: "custom-cleaning",
       title: "Custom Cleaning",
       description:
-        "Flexible cleaning plans based on your specific needs.",
+        "Flexible cleaning plans for villas, offices-at-home, and maid’s room extras.",
       details:
-        "Build a checklist around pets, offices, extras, or seasonal refreshes.",
+        "Build a checklist around pets, guests, Ramadan refreshes, or seasonal villa deep cleans.",
       included: [
         "Personalized checklist",
         "Add-on friendly",
@@ -249,16 +247,16 @@ export const siteConfig = {
       imageAlt: "Organized home interior ready for custom cleaning",
       icon: "sliders" as const,
       href: "/services/custom-cleaning",
-      startingPrice: 149,
+      startingPrice: 229,
     },
   ],
   pricing: [
     {
       id: "standard",
       name: "Standard Clean",
-      price: 129,
+      price: 199,
       frequency: "from / visit",
-      description: "Ideal for weekly or biweekly upkeep.",
+      description: "Ideal for weekly or biweekly Dubai apartment upkeep.",
       features: [
         "Kitchen & bathrooms",
         "Dusting & floors",
@@ -271,9 +269,9 @@ export const siteConfig = {
     {
       id: "deep",
       name: "Deep Clean",
-      price: 249,
+      price: 399,
       frequency: "from / visit",
-      description: "A thorough reset for neglected or seasonal cleans.",
+      description: "A thorough reset for villas and seasonal cleans.",
       features: [
         "Everything in Standard",
         "Baseboards & details",
@@ -286,38 +284,38 @@ export const siteConfig = {
     {
       id: "move",
       name: "Move In / Out",
-      price: 299,
+      price: 499,
       frequency: "from / visit",
-      description: "Empty-home detail for handovers and first nights.",
+      description: "Empty-home detail for handovers and Ejari-ready finishes.",
       features: [
         "Cabinets inside & out",
         "Appliance interiors",
         "Closets & shelves",
-        "Deposit-ready finish",
+        "Handover-ready finish",
       ],
       popular: false,
       href: "/#quote",
     },
   ],
   addOns: [
-    { id: "oven", name: "Inside oven", price: 35 },
-    { id: "fridge", name: "Inside fridge", price: 30 },
-    { id: "windows", name: "Interior windows", price: 40 },
-    { id: "laundry", name: "Laundry fold", price: 25 },
+    { id: "oven", name: "Inside oven", price: 55 },
+    { id: "fridge", name: "Inside fridge", price: 49 },
+    { id: "windows", name: "Interior windows", price: 65 },
+    { id: "laundry", name: "Laundry fold", price: 40 },
   ],
   features: [
     {
       id: "trusted",
       title: "Trusted Professionals",
       description:
-        "Background-checked teams who treat your home with care and respect.",
+        "Vetted Dubai cleaning teams who treat apartments and villas with care.",
       icon: "users" as const,
     },
     {
       id: "ontime",
       title: "Reliable & On-Time",
       description:
-        "Clear arrival windows and consistent quality you can count on.",
+        "Clear arrival windows across Marina, Downtown, Palm, and beyond.",
       icon: "clock" as const,
     },
     {
@@ -339,7 +337,7 @@ export const siteConfig = {
     {
       id: "insured",
       title: "Fully Insured",
-      description: "Liability coverage on every visit.",
+      description: "Liability coverage on every Dubai visit.",
       icon: "shield" as const,
     },
     {
@@ -365,136 +363,97 @@ export const siteConfig = {
     {
       number: "01",
       title: "Tell Us About Your Home",
-      description: "Choose your service and tell us what you need.",
+      description: "Choose your Dubai community, service, and what you need.",
     },
     {
       number: "02",
       title: "We Make It Sparkle",
       description:
-        "Our professional team arrives and takes care of everything.",
+        "Our professional team arrives on time and takes care of everything.",
     },
     {
       number: "03",
       title: "Enjoy Your Fresh Home",
-      description: "Relax and enjoy a cleaner, healthier space.",
+      description: "Relax and enjoy a cleaner, cooler, healthier Dubai space.",
     },
   ],
   areas: [
     {
-      id: "austin",
-      slug: "austin",
-      name: "Austin",
-      zipPrefixes: ["787"],
-      blurb: "Reliable home cleaning across central Austin neighborhoods.",
+      id: "dubai-marina",
+      slug: "dubai-marina",
+      name: "Dubai Marina",
+      communities: ["Dubai Marina", "Marina Walk", "Marina Gate"],
+      blurb: "Reliable apartment and penthouse cleaning across Dubai Marina.",
     },
     {
-      id: "round-rock",
-      slug: "round-rock",
-      name: "Round Rock",
-      zipPrefixes: ["78664", "78665", "78681"],
-      blurb: "Weekly and deep cleans for busy Round Rock households.",
+      id: "jbr",
+      slug: "jbr",
+      name: "JBR",
+      communities: ["Jumeirah Beach Residence", "The Walk"],
+      blurb: "Weekly and deep cleans for busy JBR apartments and beach homes.",
     },
     {
-      id: "cedar-park",
-      slug: "cedar-park",
-      name: "Cedar Park",
-      zipPrefixes: ["78613"],
-      blurb: "Fresh, eco-friendly cleans for Cedar Park homes.",
+      id: "downtown",
+      slug: "downtown-dubai",
+      name: "Downtown Dubai",
+      communities: ["Downtown Dubai", "Burj Khalifa area", "City Walk nearby"],
+      blurb: "Premium cleans for Downtown apartments and residences.",
     },
     {
-      id: "georgetown",
-      slug: "georgetown",
-      name: "Georgetown",
-      zipPrefixes: ["78626", "78628", "78633"],
-      blurb: "Move-in ready and recurring service in Georgetown.",
+      id: "business-bay",
+      slug: "business-bay",
+      name: "Business Bay",
+      communities: ["Business Bay", "Canal Residence"],
+      blurb: "Flexible schedules for Business Bay professionals and families.",
     },
     {
-      id: "pflugerville",
-      slug: "pflugerville",
-      name: "Pflugerville",
-      zipPrefixes: ["78660"],
-      blurb: "Apartment and house cleaning in Pflugerville.",
+      id: "palm-jumeirah",
+      slug: "palm-jumeirah",
+      name: "Palm Jumeirah",
+      communities: ["Palm Jumeirah", "Shoreline", "Frond villas"],
+      blurb: "Villa and apartment detail cleaning across the Palm.",
     },
     {
-      id: "leander",
-      slug: "leander",
-      name: "Leander",
-      zipPrefixes: ["78641"],
-      blurb: "Flexible schedules for growing Leander families.",
+      id: "jlt",
+      slug: "jlt",
+      name: "JLT",
+      communities: ["Jumeirah Lake Towers", "Cluster A–W"],
+      blurb: "Apartment cleaning tuned for JLT towers and lake-view homes.",
     },
     {
-      id: "lakeway",
-      slug: "lakeway",
-      name: "Lakeway",
-      zipPrefixes: ["78734", "78738"],
-      blurb: "Premium cleans for Lakeway properties.",
+      id: "dubai-hills",
+      slug: "dubai-hills",
+      name: "Dubai Hills",
+      communities: ["Dubai Hills Estate", "Park Ridge"],
+      blurb: "Family-friendly villa and townhouse cleans in Dubai Hills.",
     },
     {
-      id: "bee-cave",
-      slug: "bee-cave",
-      name: "Bee Cave",
-      zipPrefixes: ["78738"],
-      blurb: "Detailed home care throughout Bee Cave.",
+      id: "arabian-ranches",
+      slug: "arabian-ranches",
+      name: "Arabian Ranches",
+      communities: ["Arabian Ranches 1", "Arabian Ranches 2", "Arabian Ranches 3"],
+      blurb: "Thorough villa cleaning for Arabian Ranches communities.",
     },
-  ],
-  servedZips: [
-    "78701",
-    "78702",
-    "78703",
-    "78704",
-    "78705",
-    "78717",
-    "78721",
-    "78722",
-    "78723",
-    "78724",
-    "78725",
-    "78726",
-    "78727",
-    "78728",
-    "78729",
-    "78730",
-    "78731",
-    "78732",
-    "78733",
-    "78734",
-    "78735",
-    "78736",
-    "78737",
-    "78738",
-    "78739",
-    "78741",
-    "78742",
-    "78744",
-    "78745",
-    "78746",
-    "78747",
-    "78748",
-    "78749",
-    "78750",
-    "78751",
-    "78752",
-    "78753",
-    "78754",
-    "78756",
-    "78757",
-    "78758",
-    "78759",
-    "78613",
-    "78626",
-    "78628",
-    "78633",
-    "78641",
-    "78660",
-    "78664",
-    "78665",
-    "78681",
+    {
+      id: "jumeirah",
+      slug: "jumeirah",
+      name: "Jumeirah",
+      communities: ["Jumeirah 1", "Jumeirah 2", "Jumeirah 3", "Umm Suqeim"],
+      blurb: "Classic villa and family-home care throughout Jumeirah.",
+    },
+    {
+      id: "al-barsha",
+      slug: "al-barsha",
+      name: "Al Barsha",
+      communities: ["Al Barsha 1", "Al Barsha South", "Tecom nearby"],
+      blurb: "Dependable house and apartment cleaning in Al Barsha.",
+    },
   ],
   beforeAfter: [
     {
       id: "1",
       title: "Kitchen refresh",
-      caption: "Grease and clutter cleared for a cook-ready space.",
+      caption: "Grease and clutter cleared for a cook-ready Dubai kitchen.",
       before:
         "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80",
       after:
@@ -522,10 +481,10 @@ export const siteConfig = {
   testimonials: [
     {
       id: "1",
-      name: "Sarah M.",
-      role: "Homeowner · Austin",
+      name: "Sara Al M.",
+      role: "Homeowner · Dubai Marina",
       quote:
-        "Magic Home completely transformed our house. The team was professional, friendly, and incredibly thorough.",
+        "Dubai Magic Home completely transformed our Marina apartment. The team was professional, friendly, and incredibly thorough.",
       rating: 5,
       source: "Google",
       avatar:
@@ -534,9 +493,9 @@ export const siteConfig = {
     {
       id: "2",
       name: "James K.",
-      role: "Busy Parent · Round Rock",
+      role: "Busy Parent · Arabian Ranches",
       quote:
-        "We finally have weekends back. Recurring cleans are consistent, on time, and the house always smells fresh.",
+        "We finally have weekends back. Recurring villa cleans are consistent, on time, and the house always smells fresh.",
       rating: 5,
       source: "Google",
       avatar:
@@ -545,9 +504,9 @@ export const siteConfig = {
     {
       id: "3",
       name: "Priya R.",
-      role: "Apartment Resident · Cedar Park",
+      role: "Apartment Resident · JLT",
       quote:
-        "Move-out cleaning was spotless. Our landlord was impressed and we got our full deposit back.",
+        "Move-out cleaning was spotless. Our landlord was impressed and the handover went smoothly.",
       rating: 5,
       source: "Google",
       avatar:
@@ -555,20 +514,20 @@ export const siteConfig = {
     },
   ],
   stats: [
-    { id: "homes", value: 500, suffix: "+", label: "Homes Cleaned" },
+    { id: "homes", value: 800, suffix: "+", label: "Dubai Homes Cleaned" },
     { id: "rating", value: 5.0, suffix: "", label: "Average Rating", decimals: 1 },
     { id: "happy", value: 98, suffix: "%", label: "Happy Customers" },
-    { id: "years", value: 5, suffix: "+", label: "Years Experience" },
+    { id: "years", value: 6, suffix: "+", label: "Years in Dubai" },
   ],
   blogPosts: [
     {
       id: "1",
       slug: "how-often-should-you-deep-clean",
-      title: "How Often Should You Deep Clean Your Home?",
+      title: "How Often Should You Deep Clean Your Dubai Home?",
       excerpt:
-        "A practical guide to deep-clean cadence for busy households and high-traffic rooms.",
+        "A practical guide to deep-clean cadence for Dubai apartments, villas, and high-traffic rooms.",
       body: [
-        "Most households benefit from a deep clean every 3–6 months, with high-traffic kitchens and bathrooms getting attention more often.",
+        "Most Dubai households benefit from a deep clean every 3–6 months, with kitchens and bathrooms getting attention more often in the humid months.",
         "If you have pets, allergies, or recently finished a renovation, schedule a deep clean sooner to reset dust and residue.",
         "Between deep cleans, a recurring standard service keeps surfaces manageable so resets stay faster and more affordable.",
       ],
@@ -582,13 +541,13 @@ export const siteConfig = {
     {
       id: "2",
       slug: "simple-ways-to-keep-your-home-fresh",
-      title: "Simple Ways to Keep Your Home Fresh",
+      title: "Simple Ways to Keep Your Dubai Home Fresh",
       excerpt:
-        "Small daily habits that keep surfaces tidy between professional visits.",
+        "Small daily habits that keep surfaces tidy between professional visits in Dubai’s climate.",
       body: [
         "Clear counters before bed, wipe bathroom sinks after use, and do a two-minute nightly reset in the kitchen.",
         "Keep a small caddy of microfiber cloths in each bathroom so quick wipe-downs become automatic.",
-        "Pair these habits with a recurring Magic Home visit and your home stays guest-ready with far less stress.",
+        "Pair these habits with a recurring Dubai Magic Home visit and your home stays guest-ready with far less stress.",
       ],
       category: "Lifestyle",
       date: "Feb 28, 2026",
@@ -600,13 +559,13 @@ export const siteConfig = {
     {
       id: "3",
       slug: "professional-cleaning-vs-diy",
-      title: "Professional Cleaning vs DIY Cleaning",
+      title: "Professional Cleaning vs DIY Cleaning in Dubai",
       excerpt:
-        "When to handle it yourself—and when bringing in pros saves time and stress.",
+        "When to handle it yourself—and when bringing in pros saves time in a busy Dubai week.",
       body: [
         "DIY works for light maintenance, but deep corners, move-outs, and post-party resets are where professionals shine.",
         "Compare the value of your time: a few hours of your weekend versus a trained team that brings supplies and systems.",
-        "Many Magic Home clients keep a DIY midweek tidy and book pros for the thorough weekly or biweekly clean.",
+        "Many Dubai Magic Home clients keep a DIY midweek tidy and book pros for the thorough weekly or biweekly clean.",
       ],
       category: "Guides",
       date: "Feb 10, 2026",
@@ -618,53 +577,53 @@ export const siteConfig = {
   ],
   faqs: [
     {
-      question: "What cleaning services do you offer?",
+      question: "What cleaning services do you offer in Dubai?",
       answer:
-        "We offer regular house cleaning, deep cleaning, move-in/move-out, apartment cleaning, kitchen & bathroom detail work, and fully custom plans.",
+        "We offer regular house cleaning, deep cleaning, move-in/move-out, apartment cleaning, kitchen & bathroom detail work, and fully custom villa plans across Dubai.",
     },
     {
-      question: "How much does a cleaning cost?",
+      question: "How much does a cleaning cost in AED?",
       answer:
-        "Standard cleans start around $129, deep cleans around $249, and move-in/out around $299 depending on home size. Use our estimate calculator or request a free quote for an exact number.",
+        "Standard cleans start around AED 199, deep cleans around AED 399, and move-in/out around AED 499 depending on home size. Prices include UAE VAT where shown. Use our estimate calculator or request a free quote for an exact number.",
     },
     {
       question: "Do I need to provide cleaning supplies?",
       answer:
-        "No—our teams arrive fully equipped. If you prefer specific eco products, let us know and we’ll accommodate when possible.",
+        "No—our teams arrive fully equipped. If you prefer specific eco products, let us know and we’ll accommodate when possible. A small materials fee may apply.",
     },
     {
       question: "Do you offer recurring cleaning?",
       answer:
-        "Yes. Choose weekly, biweekly, or monthly service and we’ll keep your home consistently fresh.",
+        "Yes. Choose weekly, biweekly, or multiple times a week and we’ll keep your Dubai home consistently fresh.",
     },
     {
       question: "How long does a cleaning take?",
       answer:
-        "Most standard cleans take 2–4 hours depending on square footage and checklist depth. We’ll set expectations when you book.",
+        "Most standard apartment cleans take 2–4 hours depending on size and checklist depth. Villas usually take longer. We’ll set expectations when you book.",
     },
     {
       question: "Are your cleaners insured?",
       answer:
-        "Yes. Magic Home teams are fully insured and background-checked for your peace of mind.",
+        "Yes. Dubai Magic Home teams are fully insured and background-checked for your peace of mind.",
     },
     {
       question: "Can I customize my cleaning service?",
       answer:
-        "Absolutely. Tell us priorities—pet areas, offices, extras—and we’ll build a checklist around your needs.",
+        "Absolutely. Tell us priorities—pet areas, maid’s room, offices, extras—and we’ll build a checklist around your needs.",
     },
     {
-      question: "What areas do you serve?",
+      question: "What areas of Dubai do you serve?",
       answer:
-        "We currently serve Austin and surrounding communities including Round Rock, Cedar Park, Georgetown, and nearby neighborhoods. Enter your ZIP on the quote form to confirm coverage.",
+        "We currently serve Dubai Marina, JBR, Downtown, Business Bay, Palm Jumeirah, JLT, Dubai Hills, Arabian Ranches, Jumeirah, Al Barsha, and nearby communities. Select your area on the quote form to confirm coverage.",
     },
   ],
   social: [
     { id: "instagram", label: "Instagram", href: "https://instagram.com" },
     { id: "facebook", label: "Facebook", href: "https://facebook.com" },
-    { id: "google", label: "Google", href: "https://www.google.com/maps" },
+    { id: "google", label: "Google", href: "https://www.google.com/maps/place/Dubai" },
   ],
   footer: {
-    blurb: "Professional cleaning that makes your home feel magical.",
+    blurb: "Professional cleaning that makes your Dubai home feel magical.",
     quickLinks: [
       { label: "Home", href: "/" },
       { label: "Services", href: "/#services" },
@@ -683,8 +642,8 @@ export const siteConfig = {
     ],
   },
   cta: {
-    heading: "Ready for a Home That Feels Like Magic?",
-    text: "Let us take cleaning off your to-do list.",
+    heading: "Ready for a Dubai Home That Feels Like Magic?",
+    text: "Let us take cleaning off your to-do list — apartments and villas across Dubai.",
     image:
       "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80",
     imageAlt: "Friendly professional cleaner smiling in a branded apron",
@@ -693,9 +652,14 @@ export const siteConfig = {
 
 export type SiteConfig = typeof siteConfig;
 
-export function isZipServed(zip: string): boolean {
-  const normalized = zip.trim();
-  return (siteConfig.servedZips as readonly string[]).includes(normalized);
+export function isCommunityServed(communitySlug: string): boolean {
+  const normalized = communitySlug.trim().toLowerCase();
+  return siteConfig.areas.some((a) => a.slug === normalized || a.id === normalized);
+}
+
+/** @deprecated Use isCommunityServed — kept for transitional imports */
+export function isZipServed(zipOrCommunity: string): boolean {
+  return isCommunityServed(zipOrCommunity);
 }
 
 export function getServiceBySlug(slug: string) {
@@ -710,7 +674,7 @@ export function getPostBySlug(slug: string) {
   return siteConfig.blogPosts.find((p) => p.slug === slug);
 }
 
-/** Rough estimate helper for the calculator UI */
+/** Rough estimate helper for the calculator UI (AED) */
 export function estimatePrice(input: {
   serviceId: string;
   bedrooms: number;
@@ -719,8 +683,9 @@ export function estimatePrice(input: {
   addOnIds: string[];
 }): number {
   const service = siteConfig.services.find((s) => s.id === input.serviceId);
-  const base = service?.startingPrice ?? 129;
-  const roomAddon = Math.max(0, input.bedrooms - 2) * 20 + Math.max(0, input.bathrooms - 1) * 15;
+  const base = service?.startingPrice ?? 199;
+  const roomAddon =
+    Math.max(0, input.bedrooms - 2) * 35 + Math.max(0, input.bathrooms - 1) * 25;
   const addOnsTotal = input.addOnIds.reduce((sum, id) => {
     const addOn = siteConfig.addOns.find((a) => a.id === id);
     return sum + (addOn?.price ?? 0);

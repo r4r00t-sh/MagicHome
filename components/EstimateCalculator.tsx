@@ -39,8 +39,8 @@ export function EstimateCalculator() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <SectionHeading
           eyebrow="Instant Estimate"
-          title="Price Your Clean in Seconds."
-          description="Adjust rooms, frequency, and add-ons for a transparent starting estimate—then book or request a final quote."
+          title="Price Your Dubai Clean in Seconds."
+          description="Adjust rooms, frequency, and add-ons for a transparent AED starting estimate—then book or request a final quote."
         />
 
         <motion.div
@@ -137,7 +137,7 @@ export function EstimateCalculator() {
                           : "bg-primary/5 text-primary"
                       }`}
                     >
-                      {addOn.name} (+${addOn.price})
+                      {addOn.name} (+AED {addOn.price})
                     </button>
                   );
                 })}
@@ -150,10 +150,12 @@ export function EstimateCalculator() {
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-mint">
                 Estimated total
               </p>
-              <p className="mt-3 text-5xl font-extrabold tracking-tight">${total}</p>
+              <p className="mt-3 text-5xl font-extrabold tracking-tight">
+                AED {total}
+              </p>
               <p className="mt-2 text-sm text-white/70">
-                Includes a ${siteConfig.depositAmount} booking deposit when you
-                schedule online. Final price confirmed before service.
+                Includes an AED {siteConfig.depositAmount} booking deposit when you
+                schedule online. Final price confirmed before service (VAT may apply).
               </p>
             </div>
             <div className="mt-8 flex flex-col gap-2">

@@ -22,9 +22,9 @@ export default function TermsPage() {
           <p className="mt-2 text-sm text-muted">Last updated: March 2026</p>
           <div className="mt-8 space-y-4 text-base leading-relaxed text-muted">
             <p>
-              By requesting a quote or booking Magic Home services, you agree to
-              provide accurate access information and a safe working environment for
-              our team.
+              By requesting a quote or booking Dubai Magic Home services, you agree
+              to provide accurate access information and a safe working environment
+              for our team across Dubai.
             </p>
             <p>
               Quotes are estimates based on the details you provide. Final pricing

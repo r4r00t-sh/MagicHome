@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "Magic Home — Professional Home Cleaning";
+export const alt = "Dubai Magic Home — Professional Home Cleaning in Dubai";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -33,7 +33,7 @@ export default function OpenGraphImage() {
             textTransform: "uppercase",
           }}
         >
-          Magic Home
+          Dubai Magic Home
         </div>
         <div
           style={{
@@ -44,10 +44,10 @@ export default function OpenGraphImage() {
             maxWidth: 900,
           }}
         >
-          Professional Cleaning. A Home That Feels Like Magic.
+          Professional Cleaning Across Dubai.
         </div>
         <div style={{ marginTop: 24, fontSize: 28, color: "rgba(255,255,255,0.75)" }}>
-          Austin & nearby · Insured · Eco-friendly · Free quotes
+          Marina · Downtown · Palm · JLT · AED pricing · Free quotes
         </div>
       </div>
     ),

@@ -72,7 +72,13 @@ export function ReviewStep({
         <ReviewItem label="Name" value={selections.name} />
         <ReviewItem label="Phone" value={selections.phone} />
         <ReviewItem label="Email" value={selections.email} />
-        <ReviewItem label="ZIP" value={selections.zip} />
+        <ReviewItem
+          label="Community"
+          value={
+            siteConfig.areas.find((a) => a.slug === selections.community)?.name ??
+            selections.community
+          }
+        />
         <ReviewItem
           label="Address"
           value={selections.address}

@@ -7,7 +7,7 @@ import { Icon } from "@/components/ui/Icon";
 
 export const metadata: Metadata = {
   title: `Contact | ${siteConfig.name}`,
-  description: `Contact Magic Home for professional home cleaning in Austin. Call ${siteConfig.phone} or request a free quote.`,
+  description: `Contact Dubai Magic Home for professional home cleaning across Dubai. Call ${siteConfig.phone} or request a free quote in AED.`,
 };
 
 export default function ContactPage() {
@@ -16,11 +16,11 @@ export default function ContactPage() {
       <main id="main" className="bg-background pb-16 pt-28">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <h1 className="text-4xl font-extrabold tracking-tight text-primary sm:text-5xl">
-            Contact Magic Home
+            Contact Dubai Magic Home
           </h1>
           <p className="mt-4 max-w-2xl text-muted">
-            Reach us by phone, email, or the quote form below. We typically respond
-            within one business day.
+            Reach us by phone, email, or the quote form below for cleaning across
+            Dubai. We typically respond within one business day (GST).
           </p>
 
           <div className="mt-10 grid gap-4 sm:grid-cols-3">

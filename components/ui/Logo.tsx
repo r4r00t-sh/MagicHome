@@ -12,7 +12,7 @@ export function Logo({
     <Link
       href="/"
       className={`inline-flex items-center ${className}`}
-      aria-label="Magic Home home"
+      aria-label="Dubai Magic Home home"
     >
       <span
         className={`inline-flex items-center rounded-xl bg-white px-2 py-1 ${
@@ -21,7 +21,7 @@ export function Logo({
       >
         <Image
           src="/images/logo.png"
-          alt="Magic Home Cleaning Services"
+          alt="Dubai Magic Home Cleaning Services"
           width={900}
           height={386}
           priority
